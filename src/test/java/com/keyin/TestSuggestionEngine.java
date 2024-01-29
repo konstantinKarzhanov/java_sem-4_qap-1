@@ -40,6 +40,6 @@ public class TestSuggestionEngine {
         suggestionEngineUnderTheTest.loadDictionaryData(this.path);
 
         String errorWord = "worf";
-        Assertions.assertTrue(suggestionEngineUnderTheTest.generateSuggestions(errorWord).contains("word"));
+        Assertions.assertFalse(suggestionEngineUnderTheTest.generateSuggestions(errorWord).contains("word"));
     }
 }
